@@ -1,23 +1,44 @@
-import logo from "./logo.svg";
-import "./App.css";
+import { useEffect, useState } from "react";
+import "./App.scss";
 
 function App() {
+    const [counter, setCounter] = useState(0);
+    const [value, setValue] = useState("");
+
+    const incrementCounter = ()=>{
+        setCounter(counter+1);
+    }
+
+    const handleValueChange = (event)=>{
+        setValue(event.target.value);
+    }
+
+    useEffect(()=>{
+        console.log(`counter = ${counter}`);
+    },[counter])
+
+    useEffect(()=>{
+        console.log(`value = ${value}`);
+    },[value])
+
+    useEffect(()=>{
+        console.log(`Empty 1`);
+    })
+
+    useEffect(()=>{
+        console.log(`Empty 2`);
+    },[])
+
+
     return (
-        <div className="App">
-            <header className="App-header">
-                <img src={logo} className="App-logo" alt="logo" />
-                <p>
-                    Edit <code>src/App.js</code> and save to reload.
-                </p>
-                <a
-                    className="App-link"
-                    href="https://reactjs.org"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    Learn React
-                </a>
-            </header>
+        <div className="app">
+            <h4>Count = {counter}</h4>
+            <button  name="counter" onClick={incrementCounter}>Increment Count</button>
+            <br />
+            <input type="text" placeholder="Enter value" value={value} onChange={handleValueChange} />
+            
+            <h4>Value = {value}</h4>
+            
         </div>
     );
 }
