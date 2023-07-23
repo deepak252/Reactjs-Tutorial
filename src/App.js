@@ -1,12 +1,13 @@
 import "./App.scss";
-import { Counter } from "./features/counter/Counter";
+import { Dashboard } from "./features/dashboard/Dashboard";
+// import { Counter } from "./features/counter/Counter";
 
 function App() {
 
     return (
         <div className="app">
-            <Counter />
-            
+            {/* <Counter /> */}
+            <Dashboard />
         </div>
     );
 }
