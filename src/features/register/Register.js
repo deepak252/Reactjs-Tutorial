@@ -1,4 +1,5 @@
-import {setProfile} from "../profile/profileSlice";
+// import {setProfile} from "../profile/profileSlice";
+import {setProfile} from "../profile/profileAction";
 import {useDispatch}  from "react-redux";
 import {useState} from "react";
 import "./Register.scss";
