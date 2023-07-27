@@ -6,7 +6,7 @@ import "./Register.scss";
 const Register = ()=>{
     const [formValues, setFormValues] =  useState({
         name : "", email : "", phone : ""
-    })
+    });
     const dispatch = useDispatch();
 
     const handleFormChange = (event)=>{
@@ -14,7 +14,7 @@ const Register = ()=>{
         setFormValues({
             ...formValues,
             [name] : value
-        })
+        });
     }
 
     const registerUser = (event)=>{
