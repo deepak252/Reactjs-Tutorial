@@ -1,15 +1,12 @@
-import { useState } from "react";
+import withCounter from "./withCounter";
 
-function HoverCounter() {
-    const [count, setCount] = useState(0);
-    const incrementCount = () => {
-        setCount((val) => val + 1);
-    };
+function HoverCounter(props) {
     return (
         <div>
-            <h1 onMouseEnter={incrementCount}>Hovered {count} times </h1>
+            <h1 onMouseEnter ={props.incrementCount}>Hovered {props.count} times</h1>
         </div>
     );
 }
 
-export default HoverCounter;
+// Export with UpdatedComponent HOC
+export default withCounter(HoverCounter);
