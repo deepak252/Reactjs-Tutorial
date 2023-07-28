@@ -1,10 +1,10 @@
 import { useState, Component} from "react";
 
 // Higher Order Component
-const withCounter=(WrappedComponent)=> (props)=>{
+const withCounter=(WrappedComponent, incrementNumber=1)=> (props)=>{
         const [count, setCount] = useState(0);
         const incrementCount = () => {
-            setCount((val) => val + 1);
+            setCount((val) => val + incrementNumber);
         };
         return <WrappedComponent count={count} incrementCount={incrementCount} {...props}/>
 }
