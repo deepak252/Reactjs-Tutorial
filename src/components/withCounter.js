@@ -6,7 +6,7 @@ const withCounter=(WrappedComponent)=> (props)=>{
         const incrementCount = () => {
             setCount((val) => val + 1);
         };
-        return <WrappedComponent count={count} incrementCount={incrementCount} />
+        return <WrappedComponent count={count} incrementCount={incrementCount} {...props}/>
 }
 //// 2.
 // const withCounter=(WrappedComponent)=> {
