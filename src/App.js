@@ -6,16 +6,16 @@ import HoverCounter from "./components/HoverCounter";
 function App() {
     return (
         <div className="App">
-            <Counter 
-                render = {
+            <Counter>
+                {
                     (count,setCount)=><ClickCounter count={count} setCount={setCount} />
                 }
-            />
-            <Counter 
-                render = {
+            </Counter>
+            <Counter>
+                {
                     (count,setCount)=><HoverCounter count={count} setCount={setCount} />
                 }
-            />
+            </Counter>
         </div>
     );
 }

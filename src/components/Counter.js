@@ -7,7 +7,7 @@ export const Counter = (props)=> {
         setCount(prev=>prev+1);
     }
     return (
-        props.render(count,incrementCount)
+        props.children(count,incrementCount)
     );
 }
 
