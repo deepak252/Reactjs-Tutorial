@@ -14,8 +14,12 @@ function App() {
         <div className="App">
             <Navbar />
             <Routes>
+                
                 <Route path="/" element={<Home />} />
                 <Route path="about" element={<About />} />
+                {/* Relative Links dont starts with a forward slash,
+                    Inherits the closest route rendered
+                */}
                 {/* NESTED ROUTES, INDEX */}
                 <Route path="products" element={<Products />} >
                     <Route index  element={<TopProducts />}/>  {/* renders in the parent's outlet at the parent's URL */}
