@@ -1,12 +1,15 @@
 import { useAuth } from "../state/auth";
+import { useNavigate } from "react-router-dom";
 
 function Profile() {
     const auth = useAuth();
+    const navigate = useNavigate();
 
     const handleLogoutClick = ()=>{
         auth.logout();
+        navigate('/');
     }
-    
+
     return (
         <div>
             <h2>Profile</h2>
