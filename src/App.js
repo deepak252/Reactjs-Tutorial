@@ -14,6 +14,7 @@ function App() {
                 <Route path="/" element={<Home />} />
                 <Route path="about" element={<About />} />
                 <Route path="products" element={<Products />} >
+                    <Route index  element={<TopProducts />}/>  {/* renders in the parent's outlet at the parent's URL */}
                     <Route path="top" element={<TopProducts />}/>
                     <Route path="featured" element={<FeaturedProducts />}/>
                 </Route>
