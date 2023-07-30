@@ -1,0 +1,12 @@
+.nav--products{
+    margin : 20px;
+}
+
+.nav--products a{
+    padding: 12px;
+}
+
+.nav--products a.active{
+    padding: 12px;
+    background-color: lightblue;
+}

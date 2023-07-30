@@ -1,10 +1,10 @@
-nav{
+.nav--primary{
     padding: 12px;
     background-color: teal;
     text-align: start;
 }
 
-nav a{
+.nav--primary a{
     color: white;
     padding: 12px;
 }
