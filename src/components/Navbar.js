@@ -3,12 +3,20 @@ import "./Navbar.css";
 import {NavLink} from "react-router-dom";
 
 const Navbar = () => {
-  return (
-    <nav>
-        <NavLink to = "/">Home</NavLink>
-        <NavLink to = "about">About</NavLink>
-    </nav>
-  )
+
+    const navLinkStyle =({isActive}) =>{
+        return {
+            textDecoration : isActive ? 'none' : 'underline',
+            fontWeight : isActive ? 'bold' : 'normal'
+        }
+    }
+
+    return (
+        <nav>
+            <NavLink style = {navLinkStyle} to = "/">Home</NavLink>
+            <NavLink style = {navLinkStyle} to = "about">About</NavLink>
+        </nav>
+    )
 }
 
 export default Navbar
