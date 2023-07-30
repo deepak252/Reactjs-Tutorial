@@ -1,0 +1,11 @@
+nav{
+    padding: 12px;
+    background-color: teal;
+    text-align: start;
+}
+
+nav a{
+    text-decoration: none;
+    color: white;
+    padding: 12px;
+}
