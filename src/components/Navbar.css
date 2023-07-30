@@ -5,7 +5,11 @@ nav{
 }
 
 nav a{
-    text-decoration: none;
     color: white;
     padding: 12px;
+}
+
+nav a.active{
+    font-weight: bold;
+    text-decoration: none;
 }
